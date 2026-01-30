@@ -9,3 +9,9 @@ fetch("components/header.html")
   .then(navbarHTML => {
     document.getElementById("navbar").innerHTML = navbarHTML;
   });
+
+  fetch("components/head.html")
+  .then(res => res.text())
+  .then(navbarHTML => {
+    document.getElementById("head").innerHTML = navbarHTML;
+  });
