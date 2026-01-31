@@ -29,6 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.classList.toggle("hidden");
     };
   } 
-  mobileQuery.addEventListener("change", loadHeaderAndNavbar);
-  loadHeaderAndNavbar();
+  function loadFooter(){
+    fetch("components/footer.html")
+  .then(res => res.text())
+  .then(footerHTML => {
+    document.getElementById("footer").innerHTML = footerHTML
+
+  })
+}
+loadFooter()
+  mobileQuery.addEventListener("change", loadHeaderAndNavbar)
+  loadHeaderAndNavbar()
+  
 });
