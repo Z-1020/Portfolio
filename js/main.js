@@ -13,6 +13,30 @@ const projectsHome = [
     
   },
 ]
+const skills = [
+    {
+      title : "Langages",
+      items: ["HTML", "CSS", "JavaScript", "PHP", "SQL / PLSQL", "Java", "JavaFx", "C"],
+      color: "bg-stone-500 rounded-xl shadow-lg w-60 md:w-90 md:h-150 mx-auto shadow-stone-600 text-stone-50 ",
+
+    },
+    {
+      title : "Frameworks",
+      items : ["Laravel", "Tailwind CSS", "Boostrap", "React (en cours)"],
+      color: "bg-stone-600 rounded-xl w-60 md:w-90 md:h-150 shadow-lg mx-auto  shadow-stone-700 text-stone-50 ",
+    },
+    {
+      title : "Outils",
+      items : ["Visual Studio Code", "Eclipse", "SQL Developer", "Proxmox", "VirtualBox", "Apache", "MySQL", "XAMPP", "Git (github, gitLab)"],
+      color: "bg-stone-700 rounded-xl w-60 md:w-90 md:h-150 shadow-lg mx-auto shadow-stone-800 text-stone-50 ",
+    },
+    {
+      title : "Systèmes et réseaux",
+      items : ["Commande Linux et Windows", "Notions de réseaux (configuration de routeurs)", "Déploiement et configuration de serveurs web (Apache)", "Configuration de serveurs FTP (FileZilla)"],
+      color: "bg-stone-800 rounded-xl shadow-lg w-60 md:w-90 md:h-150 mx-auto shadow-stone-900 text-stone-50 ",
+    }
+
+  ]
 
 const interest = [
     {
@@ -170,6 +194,27 @@ function loadProjects(){
           </article>
   `).join("")
 }
+function loadSkills(){
+  document.getElementById("skills").innerHTML = 
+  skills.map(p=> `
+     <article class="mb-10">
+           
+              <div class="${p.color}">
+                <div>
+                  <h2 class="font-bold text-xl text-2xl md:text-4xl font-bold p-4 text-center text-stone-50">
+                    ${p.title}
+                  </h2>
+                  <ul class="list-disc p-8 md:text-3xl text-l ml-4">
+                    ${p.items.map((item) => `
+                      <li>${item}</li>
+                    `).join("")}
+                  </ul>
+                </div>
+              </div>
+            </motion.article>
+          </article>
+  `).join("")
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const mobileQuery = window.matchMedia("(max-width: 767px)");
@@ -222,7 +267,13 @@ loadFooter()
   else if(document.getElementById("interests") ){
     loadInterests()
   }
-  else if(document.getElementById("projects"))
+  else if(document.getElementById("projects")){
   loadProjects()
+  }
+  else if(document.getElementById("skills")){
+    loadSkills()
+  }
+  else{
 
+  }
 });
