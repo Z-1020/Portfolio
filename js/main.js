@@ -41,9 +41,6 @@ const skills = [
 const interest = [
     {
       title: "Géologie / Minéralogie (loisir)",
-      initial:"{{ opacity: 0, y: 30 }}",
-      animate:"{{ opacity: 1, y: 0 }}",
-      transition: 1,
       color: "bg-stone-500 p-4 rounded-xl shadow-lg shadow-stone-600",
       image1: "../assets/images/collection1.jpg",
       image2: "../assets/images/collection2.jpg",
@@ -54,9 +51,6 @@ const interest = [
     },
     {
       title: "Photographie",
-      initial:"{{ opacity: 0, y: 30 }}",
-      animate:"{{ opacity: 1, y: 0 }}",
-      transition: 1.1 ,
       color: "bg-stone-600 p-4 rounded-xl shadow-lg shadow-stone-700",
       image1: "../assets/images/amethyste1.jpg",
       image2: "../assets/images/citrine2.jpg",
@@ -71,7 +65,7 @@ const interest = [
   const projects = [
   {
     title : "Application de recherche de stage",
-    color: "bg-stone-500 p-4 rounded-xl shadow-lg shadow-stone-600",
+    color: " bg-stone-500 p-4 rounded-xl shadow-lg shadow-stone-600",
     image : "../assets/images/applicationStage.png",
     nbPersons : "Projet de groupe (5 personnes)",
     languages : "React, Laravel, Tailwind CSS",
@@ -131,11 +125,11 @@ function loadHome(){
                 <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">${p.title}</h2>
                 <img src="${p.image}"class="mx-auto rounded-xl" alt="Capture d'écran "></img>
                 <div class="md:flex md:flex-col p-4 md:p-4">
-                  <h3 class="font-bold text-xl text-2xl md:text-4xl font-bold mt-4">Description</h3>
+                  <h3 class="text-2xl md:text-4xl mt-4">Description</h3>
                   <p  class="space-y-1 text-justify md:text-3xl text-l mt-4">${p.description}</p> 
-                  <button aria-label="Voir les projets" class="hover:cursor-pointer p-4 bg-stone-800 md:w-1/2 w-full rounded-xl m-4 hover:bg-stone-900 mx-auto text-l md:text-3xl"}>
+                  <a href="pages/projects.html" aria-label="Voir les projets" class="hover:cursor-pointer text-center  p-4 bg-stone-800 md:w-1/2 w-full rounded-xl m-4 hover:bg-stone-900 mx-auto text-l md:text-3xl">
                     Voir les projets
-                  </button>       
+                  </a>       
                 </div>
               </div>
     </article>
@@ -165,28 +159,28 @@ function loadInterests(){
 function loadProjects(){
   document.getElementById("projects").innerHTML = 
   projects.map(p=> `
-     <article class="mb-10">
-              <div class= "${p.color}">
+     <article class="mb-30">
+              <div class= " ${p.color}">
                 <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">${p.title}</h2>
                 <p class="text-center text-center space-y-1 p-4 md:text-3xl text-l mb-4 ">${p.nbPersons}</p>
                 <img src=${p.image} class="mx-auto rounded-xl" alt="Capture d'écran "></img>
                 <div class="md:flex md:flex-col p-4 md:p-4">
-                  <h3 class="font-bold text-xl text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
+                  <h3 class="text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
                   <p class="space-y-1 mt-4 text-justify md:text-3xl text-l">
                     ${p.languages}
                   </p>
-                  <h3 class="font-bold text-xl text-2xl md:text-4xl font-bold mt-4">Description</h3>
+                  <h3 class="text-2xl md:text-4xl font-bold mt-4">Description</h3>
                   <p class="space-y-1 text-justify md:text-3xl text-l mt-4">${p.description}</p> 
-                  <h3 class="font-bold text-xl text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
+                  <h3 class="text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
                   <ul class="space-y-1 mt-4">
                     ${p.contributions.map(i => `
                       <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >${i}</li>
                     `).join("")}
                   </ul>
-                  <h3 class="font-bold text-xl text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers les dépôts gitHub</h3>
+                  <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers les dépôts gitHub</h3>
                   <a href=${p.link} class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">${p.link}</a>
                     ${p.viewLink ? `
-                      <h3 class="font-bold text-xl text-2xl md:text-4xl font-bold mt-4 mb-4">Visualiser le projet</h3> 
+                      <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Visualiser le projet</h3> 
                       <a href=${p.viewLink} class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">${p.viewLink}</a>
                       ` :""}
                 </div>
@@ -194,14 +188,14 @@ function loadProjects(){
           </article>
   `).join("")
 }
+
 function loadSkills(){
   document.getElementById("skills").innerHTML = 
   skills.map(p=> `
      <article class="mb-10">
-           
               <div class="${p.color}">
                 <div>
-                  <h2 class="font-bold text-xl text-2xl md:text-4xl font-bold p-4 text-center text-stone-50">
+                  <h2 class="text-2xl md:text-4xl font-bold p-4 text-center text-stone-50">
                     ${p.title}
                   </h2>
                   <ul class="list-disc p-8 md:text-3xl text-l ml-4">
@@ -211,7 +205,6 @@ function loadSkills(){
                   </ul>
                 </div>
               </div>
-            </motion.article>
           </article>
   `).join("")
 }
@@ -255,8 +248,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   })
 }
-
-
 loadFooter()
 
   mobileQuery.addEventListener("change", loadHeaderAndNavbar)
@@ -274,6 +265,6 @@ loadFooter()
     loadSkills()
   }
   else{
-
+    console.log("Page non existante")
   }
 });
