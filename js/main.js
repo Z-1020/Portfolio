@@ -126,7 +126,7 @@ function loadHome(){
                 <img src="${p.image}"class="mx-auto rounded-xl" alt="Capture d'écran "></img>
                 <div class="md:flex md:flex-col p-4 md:p-4">
                   <h3 class="text-2xl md:text-4xl mt-4">Description</h3>
-                  <p  class="space-y-1 text-justify md:text-3xl text-l mt-4">${p.description}</p> 
+                  <p class="space-y-1 text-justify md:text-3xl text-l mt-4">${p.description}</p> 
                   <a href="pages/projects.html" aria-label="Voir les projets" class="hover:cursor-pointer text-center  p-4 bg-stone-800 md:w-1/2 w-full rounded-xl m-4 hover:bg-stone-900 mx-auto text-l md:text-3xl">
                     Voir les projets
                   </a>       
@@ -225,8 +225,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if(document.getElementById("home")){
       await loadComponent("header", "./components/header.html");
       const navbarPath = mobileQuery.matches
-      ? "./components/telephoneNavbar.html"
-      : "./components/navbar.html";
+      ? "./components/telephoneNavbarIndex.html"
+      : "./components/navbarIndex.html";
       await loadComponent("navbar", navbarPath);
     initBurgerMenu();
     }
