@@ -127,10 +127,11 @@ function loadHome(){
                 <div class="md:flex md:flex-col p-4 md:p-4">
                   <h3 class="text-2xl md:text-4xl mt-4">Description</h3>
                   <p class="space-y-1 text-justify md:text-3xl text-l mt-4">${p.description}</p> 
-                  <a href="pages/projects.html" aria-label="Voir les projets" class="hover:cursor-pointer text-center  p-4 bg-stone-800 md:w-1/2 w-full rounded-xl m-4 hover:bg-stone-900 mx-auto text-l md:text-3xl">
-                    Voir les projets
-                  </a>       
                 </div>
+                <div class="flex justify-center">
+                <a href="pages/projects.html" aria-label="Voir les projets" class="hover:cursor-pointer text-center  p-4 bg-stone-800 md:w-1/2 w-full rounded-xl m-4 hover:bg-stone-900 mx-auto text-l md:text-3xl">
+                    Voir les projets</a>
+                </div>    
               </div>
     </article>
 
