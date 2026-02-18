@@ -32,7 +32,7 @@ const skills = [
     },
     {
       title : "Systèmes et réseaux",
-      items : ["Commande Linux et Windows", "Notions de réseaux (configuration de routeurs)", "Déploiement et configuration de serveurs web (Apache)", "Configuration de serveurs FTP (FileZilla)"],
+      items : ["Commandes Linux / Windows", "Notions de réseaux (configuration de routeurs)", "Déploiement et configuration de serveurs web (Apache)", "Configuration de serveurs FTP (FileZilla)"],
       color: "bg-stone-800 rounded-xl shadow-lg w-60 md:w-90 md:h-150 mx-auto shadow-stone-900 text-stone-50 ",
     }
 
