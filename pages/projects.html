@@ -6,17 +6,129 @@
         <title>Portfolio</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="../js/main.js" defer></script>
-        <link href="../css/style.css" rel="stylesheet">
     </head>
-    
     <body class="bg-stone-50 ">
         <div id="header"></div>
         <main class="text-stone-50 font-roboto">
             <h1 class="text-6xl font-bold text-center text-stone-600 mt-30 mb-30">Mes projets</h1>
-  
-      <hr class="ml-10 mr-10 mt-30 mb-30 border-stone-500 border-3"></hr>
-            <div id="projects" class="w-3/4 mx-auto"></div>
+            <hr class="ml-10 mr-10 mt-30 mb-30 border-stone-500 border-3"></hr>
+            <div class="w-3/4 mx-auto flex flex-col items-center gap-10 mb-30">
+                <!--Internship Search Application project-->
+                <div class= "bg-stone-500 p-4 rounded-xl shadow-lg shadow-stone-600">
+                    <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">Application de recherche de stage</h2>
+                    <p class="text-center text-center space-y-1 p-4 md:text-3xl text-l mb-4 ">Projet de groupe (5 personnes)</p>
+                    <img src="../assets/images/applicationStage.png" class="mx-auto rounded-xl" alt="Capture d'écran "></img>
+                    <div class="md:flex md:flex-col p-4 md:p-4">
+                        <h3 class="text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
+                        <p class="space-y-1 mt-4 text-justify md:text-3xl text-l">
+                            React, Laravel, Tailwind CSS
+                        </p>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Description</h3>
+                        <p class="space-y-1 text-justify md:text-3xl text-l mt-4">Cette application a été conçue pour répondre à la demande d'une cliente (fictive), souhaitant une application afin de faciliter la recherche de stage de ses étudiants.</p> 
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
+                        <ul class="space-y-1 mt-4">
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Utilisation de l'API pour afficher les informations d'une entreprise</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Requête pour afficher le nombre d'étudiants ayant effectué leur stage dans l'entreprise</li>
+                        </ul>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers le dépôt gitHub</h3>
+                        <a href="https://github.com/Z-1020/StageWebApp.git" class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">https://github.com/Z-1020/StageWebApp.git</a>
+                    </div>
+                </div>
+                <!--DungeonXplorer project-->
+                <div class= "bg-stone-600 p-4 rounded-xl shadow-lg shadow-stone-700">
+                    <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">DungeonXplorer</h2>
+                    <p class="text-center text-center space-y-1 p-4 md:text-3xl text-l mb-4 ">Projet de groupe (4 personnes)</p>
+                    <img src="../assets/images/dungeonXplorer.png" class="mx-auto rounded-xl" alt="Capture d'écran "></img>
+                    <div class="md:flex md:flex-col p-4 md:p-4">
+                        <h3 class="text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
+                        <p class="space-y-1 mt-4 text-justify md:text-3xl text-l">
+                            PHP, HTML, CSS, JavaScript, Tailwind CSS
+                        </p>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Description</h3>
+                        <p class="space-y-1 text-justify md:text-3xl text-l mt-4">DungeonXplorer est un jeu développé en PHP, il est inspiré d'un « livre dont vous êtes le héros ». Le joueur peut gérer son compte, s'inscrire, se connecter et commencer une aventure.</p> 
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
+                        <ul class="space-y-1 mt-4">     
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Affichage du profil</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Suppression du compte par l'utilisateur</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Modification des éléments du compte par l'utilisateur</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Gestion des combats en JavaScript</li>
+                        </ul>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers le dépôt gitHub</h3>
+                        <a href="https://github.com/Z-1020/DungeonXplorer.git" class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">https://github.com/Z-1020/DungeonXplorer.git</a>
+                    </div>
+                </div>
+                <!--Gribouille project-->
+                <div class= "bg-stone-700 p-4 rounded-xl shadow-lg shadow-stone-800">
+                    <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">Gribouille</h2>
+                    <p class="text-center text-center space-y-1 p-4 md:text-3xl text-l mb-4 ">Projet individuel</p>
+                    <img src="../assets/images/gribouille.jpg" class="mx-auto rounded-xl" alt="Capture d'écran "></img>
+                    <div class="md:flex md:flex-col p-4 md:p-4">
+                        <h3 class="text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
+                        <p class="space-y-1 mt-4 text-justify md:text-3xl text-l">
+                            Java, JavaFX
+                        </p>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Description</h3>
+                        <p class="space-y-1 text-justify md:text-3xl text-l mt-4">Gribouille est un logiciel de dessin réalisé en Java et en JavaFX. Il est possible de réaliser des dessins, de changer la couleur ou d'épaissir le tracé, ainsi que de sauvegarder le dessin.</p> 
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
+                        <ul class="space-y-1 mt-4">
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Gestion du tracé</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Changement de la taille du tracé</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Changement de couleur du tracé</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Affichage du tracé</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Sauvegarde du dessin</li>
+                        </ul>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers le dépôt gitHub</h3>
+                        <a href="https://github.com/Z-1020/Gribouille.git" class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">https://github.com/Z-1020/Gribouille.git</a>
+                    </div>
+                </div>
+                <!--Anime Requester project-->
+                <div class= "bg-stone-800 p-4 rounded-xl shadow-lg shadow-stone-900">
+                    <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">Anime Requester</h2>
+                    <p class="text-center text-center space-y-1 p-4 md:text-3xl text-l mb-4 ">Projet de groupe (3 personnes)</p>
+                    <img src="../assets/images/animeRequester.png" class="mx-auto rounded-xl" alt="Capture d'écran "></img>
+                    <div class="md:flex md:flex-col p-4 md:p-4">
+                        <h3 class="text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
+                        <p class="space-y-1 mt-4 text-justify md:text-3xl text-l">
+                            HTML, CSS, JavaScript
+                        </p>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Description</h3>
+                        <p class="space-y-1 text-justify md:text-3xl text-l mt-4">L'Anime Requester est un site web qui, grâce à une API, permet de rechercher et d'afficher des résumés d'animés japonais. Il est possible de rechercher par genre, par nom, par classement ou par leur identifiant.</p> 
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
+                        <ul class="space-y-1 mt-4">
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Mode sombre / mode clair</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Création du design avec CSS</li>
+                        </ul>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers le dépôt gitHub</h3>
+                        <a href="https://github.com/Z-1020/AnimeRequester.git" class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">https://github.com/Z-1020/AnimeRequester.git</a>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Visualiser le projet</h3>
+                        <a href="https://Z-1020.github.io/AnimeRequester/" class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">https://Z-1020.github.io/AnimeRequester/</a>
+                    </div>
+                </div>
+                <!--Solo Pong project-->
+                <div class= "bg-stone-900 p-4 rounded-xl shadow-lg shadow-stone-950">
+                    <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">Solo Pong</h2>
+                    <p class="text-center text-center space-y-1 p-4 md:text-3xl text-l mb-4 ">Projet de groupe (2 personnes)</p>
+                    <img src="../assets/images/soloPong.png" class="mx-auto rounded-xl" alt="Capture d'écran "></img>
+                    <div class="md:flex md:flex-col p-4 md:p-4">
+                        <h3 class="text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
+                        <p class="space-y-1 mt-4 text-justify md:text-3xl text-l">
+                            HTML, CSS, JavaScript
+                        </p>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Description</h3>
+                        <p class="space-y-1 text-justify md:text-3xl text-l mt-4">Solo Pong est un jeu inspiré de Pong, mythique jeu commercialisé en 1972. Le principe du jeu est de faire rebondir la balle sur la raquette et sur les murs. Si la balle touche le sol, vous perdez.</p> 
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
+                        <ul class="space-y-1 mt-4">
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Affichage du jeu</li>
+                            <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >Gestion des mouvements de la raquette</li>
+                        </ul>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers le dépôt gitHub</h3>
+                        <a href="https://github.com/Z-1020/pong.git" class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">https://github.com/Z-1020/pong.git</a>
+                        <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Visualiser le projet</h3>
+                        <a href="https://Z-1020.github.io/pong/" class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">https://Z-1020.github.io/pong/</a>
+                    </div>
+                </div>
+            </div>
         </main>
-     <div id="footer"></div>
+        <div id="footer"></div>
     </body>
 </html>

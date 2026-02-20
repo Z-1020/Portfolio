@@ -48,61 +48,6 @@ const interest = [
     
   ]
 
-  const projects = [
-  {
-    title : "Application de recherche de stage",
-    color: " bg-stone-500 p-4 rounded-xl shadow-lg shadow-stone-600",
-    image : "../assets/images/applicationStage.png",
-    nbPersons : "Projet de groupe (5 personnes)",
-    languages : "React, Laravel, Tailwind CSS",
-    contributions : ["Utilisation de l'API pour afficher les informations d'une entreprise", "Requête pour afficher le nombre d'étudiants ayant effectué leur stage dans l'entreprise"],
-    description : "Cette application a été conçue pour répondre à la demande d'une cliente (fictive), souhaitant une application afin de faciliter la recherche de stage de ses étudiants.",
-    link: "https://github.com/Z-1020/StageWebApp.git",
-  },
-  {
-    title : "DungeonXplorer",
-    color: "bg-stone-600 p-4 rounded-xl shadow-lg shadow-stone-700",
-    image : "../assets/images/dungeonXplorer.png",
-    nbPersons : "Projet de groupe (4 personnes)" ,
-    languages : "PHP, HTML, CSS, JavaScript, Tailwind CSS",
-    contributions : ["Affichage du profil", "Suppression du compte par l'utilisateur", "Modification des éléments du compte par l'utilisateur", "Gestion des combats en JavaScript"],
-    description : "DungeonXplorer est un jeu développé en PHP, il est inspiré d'un « livre dont vous êtes le héros ». Le joueur peut gérer son compte, s'inscrire, se connecter et commencer une aventure.",
-    link: "https://github.com/Z-1020/DungeonXplorer.git",
-  },
-  {
-    title : "Gribouille",
-    color: "bg-stone-700 p-4 rounded-xl shadow-lg shadow-stone-800",
-    image : "../assets/images/gribouille.jpg",
-    nbPersons : "Projet individuel",
-    languages : "Java, JavaFX",
-    contributions :["Gestion du tracé", "Changement de la taille du tracé", "Changement de couleur du tracé", "Affichage du tracé", "Sauvegarde du dessin"],
-    description : "Gribouille est un logiciel de dessin réalisé en Java et en JavaFX. Il est possible de réaliser des dessins, de changer la couleur ou d'épaissir le tracé, ainsi que de sauvegarder le dessin.",
-    link: "https://github.com/Z-1020/Gribouille.git",
-  },
-  {
-    title : "Anime Requester",
-    color: "bg-stone-800 p-4 rounded-xl shadow-lg shadow-stone-900",
-    image : "../assets/images/animeRequester.png",
-    nbPersons : "Projet de groupe (3 personnes)",
-    languages : "HTML, CSS, JavaScript",
-    contributions : ["Mode sombre / mode clair", "Création du design avec CSS"],
-    description : "L'Anime Requester est un site web qui, grâce à une API, permet de rechercher et d'afficher des résumés d'animés japonais. Il est possible de rechercher par genre, par nom, par classement ou par leur identifiant.",
-    link: "https://github.com/Z-1020/AnimeRequester.git",
-    viewLink: "https://Z-1020.github.io/AnimeRequester/",
-  },
-  {
-    title : "Solo Pong",
-    color: "bg-stone-900 p-4 rounded-xl shadow-lg shadow-stone-950",
-    image : "../assets/images/soloPong.png",
-    nbPersons : "Projet de groupe (2 personnes)",
-    languages : "HTML, CSS, JavaScript",
-    contributions : ["Affichage du jeu", "Gestion des mouvements de la raquette"],
-    description : "Solo Pong est un jeu inspiré de Pong, mythique jeu commercialisé en 1972. Le principe du jeu est de faire rebondir la balle sur la raquette et sur les murs. Si la balle touche le sol, vous perdez.",
-    link: "https://github.com/Z-1020/pong.git",
-    viewLink: "https://Z-1020.github.io/pong/",
-  }
-  ]
-
 
 function loadInterests(){
   document.getElementById("interests").innerHTML = 
@@ -123,38 +68,7 @@ function loadInterests(){
 
   `).join("")
 }
-function loadProjects(){
-  document.getElementById("projects").innerHTML = 
-  projects.map(p=> `
-     <article class="mb-30">
-              <div class= " ${p.color}">
-                <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">${p.title}</h2>
-                <p class="text-center text-center space-y-1 p-4 md:text-3xl text-l mb-4 ">${p.nbPersons}</p>
-                <img src=${p.image} class="mx-auto rounded-xl" alt="Capture d'écran "></img>
-                <div class="md:flex md:flex-col p-4 md:p-4">
-                  <h3 class="text-2xl md:text-4xl font-bold md:mt-4">Langages</h3>
-                  <p class="space-y-1 mt-4 text-justify md:text-3xl text-l">
-                    ${p.languages}
-                  </p>
-                  <h3 class="text-2xl md:text-4xl font-bold mt-4">Description</h3>
-                  <p class="space-y-1 text-justify md:text-3xl text-l mt-4">${p.description}</p> 
-                  <h3 class="text-2xl md:text-4xl font-bold mt-4">Mes Contributions</h3>
-                  <ul class="space-y-1 mt-4">
-                    ${p.contributions.map(i => `
-                      <li class="list-disc ml-8 md:p-4 md:text-3xl text-l " >${i}</li>
-                    `).join("")}
-                  </ul>
-                  <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Lien vers les dépôts gitHub</h3>
-                  <a href=${p.link} class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">${p.link}</a>
-                    ${p.viewLink ? `
-                      <h3 class="text-2xl md:text-4xl font-bold mt-4 mb-4">Visualiser le projet</h3> 
-                      <a href=${p.viewLink} class="underline hover:text-stone-300 text-justify md:text-3xl text-l mt-4">${p.viewLink}</a>
-                      ` :""}
-                </div>
-              </div>
-          </article>
-  `).join("")
-}
+
 
 function loadSkills(){
   document.getElementById("skills").innerHTML = 
@@ -189,25 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
     el.innerHTML = await res.text();
   }
   async function loadHeaderAndNavbar() {
-    if(document.getElementById("home")){
-      await loadComponent("header", "./components/header.html");
-      const navbarPath = mobileQuery.matches
-      ? "./components/telephoneNavbarIndex.html"
-      : "./components/navbarIndex.html";
-      await loadComponent("navbar", navbarPath);
-    initBurgerMenu();
-    }
-    else{
+    
     await loadComponent("header", "../components/header.html");
     const navbarPath = mobileQuery.matches
       ? "../components/telephoneNavbar.html"
       : "../components/navbar.html";
        await loadComponent("navbar", navbarPath);
     initBurgerMenu();
-    }
     
-  
-   
   }
 
   function initBurgerMenu() {
@@ -219,41 +122,17 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   } 
   function loadFooter(){
-    if(document.getElementById("home")){
-      fetch("./components/footer.html")
-      .then(res => res.text())
-  .then(footerHTML => {
-    document.getElementById("footer").innerHTML = footerHTML
-
-  })
-    }
-    else{
+   
     fetch("../components/footer.html")
     .then(res => res.text())
   .then(footerHTML => {
     document.getElementById("footer").innerHTML = footerHTML
 
   })
-    }
-  
 }
 loadFooter()
 
   mobileQuery.addEventListener("change", loadHeaderAndNavbar)
   loadHeaderAndNavbar()
-  if(document.getElementById("home")){
-    loadHome()
-  } 
-  else if(document.getElementById("interests") ){
-    loadInterests()
-  }
-  else if(document.getElementById("projects")){
-  loadProjects()
-  }
-  else if(document.getElementById("skills")){
-    loadSkills()
-  }
-  else{
-    console.log("Page non existante")
-  }
+  
 });
