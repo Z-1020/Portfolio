@@ -1,3 +1,6 @@
+const basePath = window.location.pathname.includes("/pages/")
+  ? "../"
+  : "./"
 document.addEventListener("DOMContentLoaded", () => {
   const mobileQuery = window.matchMedia("(max-width: 767px)");
 
@@ -11,25 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
     el.innerHTML = await res.text();
   }
   async function loadHeaderAndNavbar() {
-    if(document.getElementById("home")){
-      await loadComponent("header", "./components/header.html");
-      const navbarPath = mobileQuery.matches
-      ? "./components/telephoneNavbarIndex.html"
-      : "./components/navbarIndex.html";
-      await loadComponent("navbar", navbarPath);
-    initBurgerMenu();
+    await loadComponent("header", basePath + "components/header.html");
+
+const navbarPath = mobileQuery.matches
+  ? basePath + "components/telephoneNavbar.html"
+  : basePath + "components/navbar.html";
+
+  await loadComponent("navbar", navbarPath);
     }
-    else{
-    
-    await loadComponent("header", "../components/header.html");
-    const navbarPath = mobileQuery.matches
-      ? "../components/telephoneNavbar.html"
-      : "../components/navbar.html";
-       await loadComponent("navbar", navbarPath);
     initBurgerMenu();
     
-  }
-}
+   
+
 
   function initBurgerMenu() {
     const burger = document.getElementById("burger");
@@ -41,25 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
   } 
   function loadFooter(){
    
-    fetch("../components/footer.html")
-    .then(res => res.text())
+    fetch(basePath + "components/footer.html")
+  .then(res => res.text())
   .then(footerHTML => {
-    document.getElementById("footer").innerHTML = footerHTML
-
-  })
+    document.getElementById("footer").innerHTML = footerHTML;
+  });
 }
 loadFooter()
-if(document.getElementById("home")){
-      fetch("./components/footer.html")
-      .then(res => res.text())
-  .then(footerHTML => {
-    document.getElementById("footer").innerHTML = footerHTML
 
-  })
-    }
-    else{
 
   mobileQuery.addEventListener("change", loadHeaderAndNavbar)
   loadHeaderAndNavbar()
-    }
+    
 });
