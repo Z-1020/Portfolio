@@ -21,8 +21,9 @@ const navbarPath = mobileQuery.matches
   : basePath + "components/navbar.html";
 
   await loadComponent("navbar", navbarPath);
+  initBurgerMenu();
     }
-    initBurgerMenu();
+    
     
    
 
