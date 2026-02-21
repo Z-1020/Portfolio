@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     el.innerHTML = await res.text();
   }
   async function loadHeaderAndNavbar() {
+    if(document.getElementById("home")){
+      await loadComponent("header", "./components/header.html");
+      const navbarPath = mobileQuery.matches
+      ? "./components/telephoneNavbarIndex.html"
+      : "./components/navbarIndex.html";
+      await loadComponent("navbar", navbarPath);
+    initBurgerMenu();
+    }
+    else{
     
     await loadComponent("header", "../components/header.html");
     const navbarPath = mobileQuery.matches
@@ -20,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initBurgerMenu();
     
   }
+}
 
   function initBurgerMenu() {
     const burger = document.getElementById("burger");
@@ -39,8 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 }
 loadFooter()
+if(document.getElementById("home")){
+      fetch("./components/footer.html")
+      .then(res => res.text())
+  .then(footerHTML => {
+    document.getElementById("footer").innerHTML = footerHTML
+
+  })
+    }
+    else{
 
   mobileQuery.addEventListener("change", loadHeaderAndNavbar)
   loadHeaderAndNavbar()
-  
+    }
 });
