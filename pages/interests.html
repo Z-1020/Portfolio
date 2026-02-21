@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="../js/main.js" defer></script>
-    </head>
-    <body class="bg-stone-50 ">
-         <div id="header" ></div>
-         <main  class="text-stone-50 font-roboto">
-            <h1 class="text-6xl font-bold text-center text-stone-600 mt-30 mb-30">
-          Mes centres d'intérêt
-        </h1>
-  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body class="bg-stone-50 ">
+    <div id="header" ></div>
+    <main  class="text-stone-50 font-roboto">
+      <h1 class="text-6xl font-bold text-center text-stone-600 mt-30 mb-30">
+        Mes centres d'intérêt
+      </h1>
       <hr class="ml-10 mr-10 mt-30 mb-30 border-stone-500 border-3"></hr>
-            <div id="interests" class="w-3/4 mx-auto">
-             
-            </div>
-         </main>
-         <div id="footer"></div>
-    </body>
+      <div class="flex flex-col items-center justify-center gap-10 mb-30">
+        <!--Geology-->
+        <div class="bg-stone-500 p-4 w-3/4 mx-auto rounded-xl shadow-lg shadow-stone-600">
+          <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">Géologie / Minéralogie</h2>
+          <div class="grid grid-cols-2 gap-4 p-2">
+            <img src="../assets/images/collection1.jpg" class="p-2 rounded-xl" alt="Photographie de ma collection de roches"></img>
+            <img src="../assets/images/collection2.jpg" class="p-2 rounded-xl "alt="Photographie de ma collection de roches"></img>
+            <img src="../assets/images/collection3.jpg" class="p-2 rounded-xl" alt="Photographie de ma collection de roches"></img>
+            <img src="../assets/images/collection4.jpg" class="p-2 rounded-xl" alt="Photographie de ma collection de roches"></img>
+          </div>
+          <p class="p-4 text-justify md:text-3xl text-l">L’un de mes loisirs est la collection, l’identification et le classement de roches, fossiles et minéraux. Je possède aujourd’hui près d’une centaine de spécimens représentant une quarantaine d’espèces différentes. Cette passion m’accompagne depuis l’âge de 10 ans.</p>
+        </div>
+        <!--Photography-->
+        <div class="bg-stone-600 p-4 w-3/4 mx-auto rounded-xl shadow-lg shadow-stone-700">
+          <h2 class="text-2xl md:text-4xl font-bold text-center p-4 md:p-10">Photographie</h2>
+          <div class="grid grid-cols-2 gap-4 p-2">
+            <img src="../assets/images/amethyste1.jpg" class="p-2 rounded-xl" alt="Photographie d'un minéral"></img>
+            <img src="../assets/images/citrine2.jpg" class="p-2 rounded-xl "alt="Photographie d'un minéral"></img>
+            <img src="../assets/images/amethyste2.jpg" class="p-2 rounded-xl" alt="Photographie d'un minéral"></img>
+            <img src="../assets/images/aragonite.jpg" class="p-2 rounded-xl" alt="Photographie d'un minéral"></img>
+          </div>
+          <p class="p-4 text-justify md:text-3xl text-l">Je pratique la photographie depuis l’âge de 14 ans. J’aime particulièrement photographier mes pierres : en jouant sur l’angle de prise de vue et l’exposition à la lumière, chaque image devient unique.</p>
+        </div>
+      </div>
+    </main>
+    <div id="footer"></div>
+  </body>
 </html>
