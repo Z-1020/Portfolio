@@ -5,6 +5,6 @@
 <template>
   <main>
 
-    <p>bonjour</p>
+    <p>Portfolio</p>
   </main>
 </template>

@@ -1,21 +1,13 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView} from 'vue-router'
+import TheNavBar from './components/TheNavBar.vue';
 
 </script>
 
 <template>
   <header>
-
-
     <div>
-
-      <nav>
-        <RouterLink to="/">Page d'accueil</RouterLink>
-        <RouterLink to="/skills">Compétences</RouterLink>
-        <RouterLink to="/ITprojects">Projets</RouterLink>
-        <RouterLink to="/interests">Centres d'intérêt</RouterLink>
-        
-      </nav>
+    <TheNavBar/>
     </div>
   </header>
   <main>
