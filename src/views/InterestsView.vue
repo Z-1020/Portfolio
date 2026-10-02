@@ -5,6 +5,6 @@
 <template>
   <main>
 
-    <p>Portfolio 1</p>
+    <p>Portfolio 2</p>
   </main>
 </template>

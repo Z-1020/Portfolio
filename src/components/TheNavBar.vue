@@ -6,7 +6,7 @@ import { RouterLink} from 'vue-router'
   <nav class="bg-blue-500">
         <RouterLink to="/" class="text-red-500">Page d'accueil</RouterLink>
         <RouterLink to="/skills">Compétences</RouterLink>
-        <RouterLink to="/ITprojects">Projets</RouterLink>
+        <RouterLink to="/it-projects">Projets</RouterLink>
         <RouterLink to="/interests">Centres d'intérêt</RouterLink>    
       </nav>
 </template>
