@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme{
+    --color-sand: #FFF7E3;
+}
