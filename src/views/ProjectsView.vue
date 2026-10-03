@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main>
+  <main class="min-h-screen">
 
     <p>Portfolio 3</p>
   </main>
